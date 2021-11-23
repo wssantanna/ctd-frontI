@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 16 - Seletores CSS 3/3</title>
+    <!-- Código fonte da base visual -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Código fonte da aula -->
+    <style type="text/css">
+
+        /* 
+            Pseudo-classe = Estado 
+
+            Link(s)
+            :hover - Sobreponho com o mouse.
+            :active - No ato do clique (pressionar).
+            :visited - Se o link já foi visitado.
+
+        */
+
+        .link {
+            background-color: green;
+            border-radius: 5px;
+            color: white;
+            padding: 5px;
+            text-decoration: none;
+        }
+
+        .link:hover {
+            background-color: orangered;
+        }
+        
+        .link:active {
+            background-color: orange;
+        }
+
+        .link:visited {
+            background-color: gray;
+        }
+
+        /*---*/
+
+        .formulario__campo {
+            border: 1px solid lightgray;
+            border-radius: 5px;
+            display: block;
+            font-size: 18px;
+            margin: 0 auto;
+            padding: 5px 10px;
+            width: 60%;
+        }
+
+        .formulario__campo:focus {
+            outline: none;
+            box-shadow: 0 0 5px lightblue;
+        }
+
+        /* 
+            Pseudo-elemento = Conteudo 
+        */
+
+        .lista {
+            text-align: left;
+            list-style: none;
+        }
+
+        .lista__item {
+            margin: 20px 0;
+        }
+
+        .lista__item:first-child {
+            background-color: blue;
+            color: white;
+        }
+
+        .lista__item:last-child {
+            background-color: blue;
+            color: white;
+        }
+
+        .lista__item:nth-child(3) {
+            background-color: green;
+        }
+
+        .conteudo__paragrafo::first-letter {
+            font-size: 24px;
+            font-weight: 900;
+            color: red;
+        }
+
+        .conteudo::before {
+            content: 'Começo';
+            background-color: blueviolet;
+            border-radius: 5px;
+            color: white;
+            display: block;
+            padding: 5px 25px;
+        }
+
+        .conteudo::after {
+            content: 'No final';
+            background-color: blueviolet;
+            border-radius: 5px;
+            color: white;
+            display: block;
+            padding: 5px 25px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+     <div class="conteudo">
+        
+        <p class="conteudo__paragrafo">Clique aqui para ir para o <a class="link" href="https://www.google.com.br" target="_blank">Ir para o Google</a></p>
+
+        <form class="formulario" action="./" method="get">
+            <div>
+                <label for="email">E-mail</label>
+                <input class="formulario__campo" name="email" type="email" placeholder="Digite seu e-mail">
+            </div>
+        </form>
+
+        <ul class="lista">
+            <li class="lista__item">Guilherme Natucci</li>
+            <li class="lista__item">Pedro Pinheiroli</li>
+            <li class="lista__item">Fabio Perez</li>
+            <li class="lista__item">Allan</li>
+            <li class="lista__item">Lucas F</li>
+            <li class="lista__item">Lucas Adrian</li>
+            <li class="lista__item">Lívia Xavie</li>
+            <li class="lista__item">Rayssa</li>
+            <li class="lista__item">Gustavo</li>
+            <li class="lista__item">Vinicius </li>
+        </ul>
+
+    </div>
+</body>
+</html>
