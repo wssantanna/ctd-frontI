@@ -1,0 +1,16 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.conteudo {
+  border: 1px solid lightgray;
+  padding: 50px;
+  margin: 0 auto;
+  max-width: 380px;
+}
+
+.conteudo__sessao {
+  border: 1px solid lightgray;
+  padding: 25px;
+  margin: 10px 0;
+}
