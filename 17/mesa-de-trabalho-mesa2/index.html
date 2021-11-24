@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesa de trabalho</title>
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css">
+
+
+.glow:hover {
+    transform: scale(1.1);
+    transition-duration: .3s;
+}
+
+.shrink:hover {
+    transform: scale(0.9);
+    transition-duration: .3s;
+}
+
+@keyframes pulso {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.1)
+    }
+    50% {
+        transform: scale(0.9)
+    }
+    100% {
+        transform: scale(1)
+    }
+}
+.pulse:hover {
+    animation-name: pulso;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pulsoGrow {
+    0% {
+        transform: scale(1)
+    }
+    50%{
+        transform: scale(1.1)
+    }
+    100%{
+        transform: scale(1)
+    }
+}
+
+.pulse-glow:hover {
+    animation-name: pulsoGrow;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pulsoShrink {
+    0% {
+        transform: scale(1)
+    }
+    50%{
+        transform: scale(0.9)
+    }
+    100%{
+        transform: scale(1)
+    }
+}
+
+.pulse-shrink:hover {
+    animation-name: pulsoShrink;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes puxa {
+    0% {
+        transform: scale(1)
+    }
+    50%{
+        transform: scale(0.9)
+    }
+    100%{
+        transform: scale(1)
+    }
+}
+
+.push:hover {
+    animation-name: puxa;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+}
+
+@keyframes empurra {
+    0% {
+        transform: scale(1)
+    }
+    50%{
+        transform: scale(1.1)
+    }
+    100%{
+        transform: scale(1)
+    }
+}
+
+.pop:hover {
+    animation-name: empurra;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+}
+
+@keyframes bounce1 {
+    0% {
+        transform: scale(1)
+    }
+    25% {
+        transform: scale(1.2)
+    }
+    50%{
+        transform: scale(1.1)
+    }
+    100%{
+        transform: scale(1.2)
+    }
+}
+
+.bounce-in:hover {
+    animation-name: bounce1;
+    animation-duration: 0.7s;
+    animation-iteration-count: 1;
+}
+
+
+@keyframes bounce-out1{
+    0% {
+        transform: scale(0.8)
+    }
+    50%{
+        transform: scale(0.5)
+    }
+    100%{
+        transform: scale(0.8)
+    }
+}
+
+.bounce-out:hover{
+
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}
+
+.rotate:hover{
+    transform: rotate(9deg);
+    transition-duration: 0.9s;
+}
+
+.grow-rotate:hover{
+    transform: rotate(15deg) scale(1.1);
+    transition-duration: 0.9s;
+}
+
+.float:hover{
+    transform: translateY(-10px);
+    transition-duration: 1s;
+}
+
+.sink:hover {
+    transform: translateY(10px);
+    transition-duration: 1s;
+}
+
+.bob:hover {
+    animation-name: bob1;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bob1 {
+    0%{
+        transform: translateY(-8px);
+    }
+    50%{
+        transform: translateY(-12px);
+    }
+    100%{
+        transform: translateY(-8px);
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <article class="conteudo">
+        <h1>Animações de transição & quadro a quadro</h1>
+        <p>Realize as animações, considerando a pseudo-classe <strong>:hover</strong>, conforme o exemplo da biblioteca <strong>Hover.css</strong> - https://ianlunn.github.io/Hover/</p>
+            <div class="caixa glow">Glow</div>
+            <div class="caixa shrink">Shirink</div>
+            <div class="caixa pulse">Pulse</div>
+            <div class="caixa pulse-glow">Pulse Glow</div>
+            <div class="caixa pulse-shrink">Pulse Shrink</div>
+            <div class="caixa push">Push</div>
+            <div class="caixa pop">Pop</div>
+            <div class="caixa bounce-in">Bounce In</div>
+            <div class="caixa bounce-out">Bounce Out</div>
+            <div class="caixa rotate">Rotate</div>
+            <div class="caixa grow-rotate">Glow Rotate</div>
+            <div class="caixa float">Float</div>
+            <div class="caixa sink">Sink</div>
+            <div class="caixa bob">Bob</div>
+        </div>
+    </article>
+</body>
+</html>
