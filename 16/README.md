@@ -1,5 +1,5 @@
 
-# Aula 16 - Seletores CSS 3/3
+# Aula 16 - CSS: Seletores 2/2
 
 ## Pseudo-classes
 Estado de um elemento.
