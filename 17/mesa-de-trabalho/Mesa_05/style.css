@@ -1,0 +1,74 @@
+.body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.conteudo {
+    margin: auto;
+    max-width: 960px;
+}
+
+.caixa {
+    background-color: rgb(209, 205, 205);
+    color: rgb(61, 60, 60);
+    border-radius: 5px;
+    display: inline-block;
+    padding: 25px;
+    margin: 10px 0;
+}
+
+
+.grow:hover {    
+    transform: scale(1.08);
+}
+
+.shrink:hover {    
+    transform: scale(0.95);
+}
+
+.pulse:hover {
+
+    animation: pulse 0.8s infinite;
+    
+}
+
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+	
+	}
+
+	70% {
+		transform: scale(1.10);
+		
+	}
+
+	100% {
+		transform: scale(1.1);
+		
+	}
+}
+
+.pulse-grow:hover {
+
+    animation: pulse 0.5s infinite;
+    
+}
+
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.85);
+	
+	}
+
+	70% {
+		transform: scale(0.9);
+		
+	}
+
+	100% {
+		transform: scale(1.0);
+		
+	}
+}
