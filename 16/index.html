@@ -12,103 +12,80 @@
 
         /* 
             Pseudo-classe = Estado 
-
-            Link(s)
-            :hover - Sobreponho com o mouse.
-            :active - No ato do clique (pressionar).
-            :visited - Se o link já foi visitado.
-
         */
 
         .link {
             background-color: green;
             border-radius: 5px;
             color: white;
-            padding: 5px;
+            padding: 5px 10px;
             text-decoration: none;
         }
 
         .link:hover {
             background-color: orangered;
         }
-        
-        .link:active {
-            background-color: orange;
-        }
 
         .link:visited {
             background-color: gray;
         }
 
-        /*---*/
+        .link:active {
+            background-color: orange;
+        }
 
         .formulario__campo {
             border: 1px solid lightgray;
             border-radius: 5px;
-            display: block;
             font-size: 18px;
-            margin: 0 auto;
             padding: 5px 10px;
-            width: 60%;
         }
 
         .formulario__campo:focus {
+            box-shadow: 0 0 5px aquamarine;
             outline: none;
-            box-shadow: 0 0 5px lightblue;
         }
 
         /* 
             Pseudo-elemento = Conteudo 
         */
 
-        .lista {
-            text-align: left;
-            list-style: none;
-        }
-
-        .lista__item {
-            margin: 20px 0;
-        }
-
-        .lista__item:first-child {
-            background-color: blue;
-            color: white;
-        }
-
-        .lista__item:last-child {
-            background-color: blue;
-            color: white;
-        }
-
-        .lista__item:nth-child(3) {
-            background-color: green;
-        }
-
         .conteudo__paragrafo::first-letter {
             font-size: 24px;
-            font-weight: 900;
             color: red;
         }
 
-        .conteudo::before {
-            content: 'Começo';
-            background-color: blueviolet;
-            border-radius: 5px;
-            color: white;
-            display: block;
-            padding: 5px 25px;
+        .list {
+            padding: 0;
+        }
+        
+        .lista__item {
+            border: 1px solid lightblue;
+            padding: 10px 0;
+            margin: 5px 0;
+            list-style: none;
         }
 
-        .conteudo::after {
-            content: 'No final';
-            background-color: blueviolet;
-            border-radius: 5px;
-            color: white;
-            display: block;
-            padding: 5px 25px;
+        .lista__item:first-child {
+            background-color: greenyellow;
         }
 
+        .lista__item:last-child {
+            background-color: greenyellow;
+        }
 
+        .lista__item:nth-child(4) {
+            background-color: darkorange;
+        }
+
+        /* odd | even */
+        .lista__item:nth-child(odd) {
+            background-color: pink;
+        }
+
+        .formulario__campo::placeholder {
+            color: blue;
+        }
 
     </style>
 </head>
@@ -120,14 +97,20 @@
         <form class="formulario" action="./" method="get">
             <div>
                 <label for="email">E-mail</label>
-                <input class="formulario__campo" name="email" type="email" placeholder="Digite seu e-mail">
+                <input 
+                    class="formulario__campo" 
+                    name="email" 
+                    type="email" 
+                    placeholder="Digite seu e-mail"
+                >
             </div>
         </form>
 
         <ul class="lista">
+            <li class="lista__item">Kauana Rodrigues</li>
             <li class="lista__item">Guilherme Natucci</li>
             <li class="lista__item">Pedro Pinheiroli</li>
-            <li class="lista__item">Fabio Perez</li>
+            <li class="lista__item">Ismael Lourenço</li>
             <li class="lista__item">Allan</li>
             <li class="lista__item">Lucas F</li>
             <li class="lista__item">Lucas Adrian</li>
@@ -135,6 +118,11 @@
             <li class="lista__item">Rayssa</li>
             <li class="lista__item">Gustavo</li>
             <li class="lista__item">Vinicius </li>
+            <li class="lista__item">Micheli Pinheiro </li>
+            <li class="lista__item">Gustavo Brina</li>
+            <li class="lista__item">Joelio Leão</li>
+            <li class="lista__item">Larissa Mayumi</li>
+            <li class="lista__item">Ana Pacheco</li>
         </ul>
 
     </div>
