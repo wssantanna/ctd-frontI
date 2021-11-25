@@ -48,7 +48,7 @@
     /* Para definir os nomes das propriedades que deseja controlar a transição. */
     /* Para estabelecer o tempo de transição. */
     transition: 
-        background-color, 1s
+        background-color, 1s,
         color, 1s;
 }
 
