@@ -8,17 +8,26 @@
     <link rel="stylesheet" href="./style.css">
     <style type="text/css">
         
-        /* Conteúdo Flexível */
+        .conteudo-flexivel {
+            /* Conteúdo Flexível */
+            display: flex;
+            /* Direção da distribuição */
+            flex-direction: row;
+            /* Controle de quebra de linhas */
+            flex-wrap: nowrap;
+            /* Alinhamento vertical */
+            align-items: center;
+            /* Distribuição horizontal */
+            justify-content: space-evenly;
+            /* Distribuição vertical */
+            align-content: flex-start;
+            /* Espaçamento entre os itens */
+            gap: 5px;
+        }
 
-        /* Direção da distribuição */
-
-        /* Controle de quebra de linhas */
-
-        /* Alinhamento vertical */
-
-        /* Distribuição horizontal */
-
-        /* Distribuição vertical */
+        .conteudo-flexivel__item {
+            width: 250px;
+        }
         
 
     </style>
@@ -31,7 +40,6 @@
         <div class="conteudo-flexivel__item">3</div>
         <div class="conteudo-flexivel__item">4</div>
         <div class="conteudo-flexivel__item">5</div>
-        <div class="conteudo-flexivel__item">6</div>
     </div>
 
 </body>
