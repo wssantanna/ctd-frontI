@@ -1,0 +1,43 @@
+body{
+    background-color: black;
+    color: white;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 25px;
+}
+
+.passo-a-passo{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.passo-a-passo_item_img {
+    display: block;
+    width: 80px;
+    margin: 0 auto;
+}
+
+.passo-a-passo_item_texto {
+    text-align: center;
+}
+.button{
+    display: block;
+    margin: 20px auto 200px;
+    padding: 15px;
+    border: 2px solid rgb(80, 80, 80);
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+}
+.galeria{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+.galeria_item{
+    width: 50%;
+}
