@@ -1,0 +1,44 @@
+body {
+    background-color: #87CEFA;
+}
+
+
+.retanguloFotosDentro {
+    background-color: beige;
+    width: 300px;
+    margin: 50px auto;  
+    padding: 20px;  
+     
+} 
+
+/* .lista {
+    display: flex;
+    flex-direction: column;
+
+} */
+
+.cartao {
+    display: flex;
+    flex-direction: column;
+}
+
+.cartao__corpo {
+    
+  
+}
+
+
+
+li {
+    list-style:none;
+}
+
+
+.cartao__imagem {
+    border-radius: 90%; 
+    width: 75%;
+    }
+
+       
+
+
