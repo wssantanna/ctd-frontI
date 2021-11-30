@@ -1,0 +1,76 @@
+.conteudo-flexivel {
+    /* Conteúdo Flexível */
+    display: flex;
+    /* Direção da distribuição */
+    flex-direction: row;
+    /* Controle de quebra de linhas */
+    flex-wrap: nowrap;
+    /* Alinhamento vertical */
+    align-items: center;
+    /* Distribuição horizontal */
+    justify-content: space-evenly;
+    /* Distribuição vertical */
+    align-content: flex-start;
+  
+    
+}
+
+.conteudo-flexivel__item {
+    padding: 50px;
+    width: 7%;
+    color: #ffffff;
+}
+body {
+    background-color: black;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    color: white;
+    
+}
+
+.sejaMembro {
+    display: flex;
+    justify-content: center;
+}
+.sejaMembro button {
+    color: #ffffff;
+    background-color: #000000;
+    padding: 15px;
+    font-size: 20px;
+    margin: 1px solid #ffffff;
+    font-weight: bold;
+}
+.sejaMembro button:hover {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.albumSocialRock {
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    font-size: 30px;
+    font-weight: bold;
+    ;
+}
+.conteudo-flexivel__item1 img{
+    width: 40%;
+}
+.conteudo-flexivel__item2 img{
+    width: 60%;
+}
+.conteudo-flexivel__item3 img{
+    width: 30%;
+}
+.conteudo-flexivel__item4 img{
+    width: 70%;
+}
+.conteudo-flexivel1 {
+    display: inline-block;
+
+}
+/* Manda lá kk */
