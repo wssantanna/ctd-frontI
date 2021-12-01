@@ -1,3 +1,4 @@
+<!-- Equipe 6: Vinicius Ocker Fagundes, Tatiane Silva, Fabiana Zanini -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,10 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mesa de trabalho</title>
     <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         /*
             1. Liste todos os itens verticalmente.
         */
+        
         .lista {
             display: flex;
         }
@@ -16,8 +23,25 @@
         /*
             2. Implemente o cartão de cada item conforme a imagem referência.
         */
-        .cartao {
+        .lista_user {
             display: grid;
+        }
+        .lista_user__item{
+            
+                
+        }
+        .l-sessao{
+            display: grid;
+        }
+        .l-atividade1{
+            background-color: rgb(35, 168, 245);
+            }
+        
+        .lista_user__item-img {
+            display:flex;
+            border-radius: 100%;
+            -ms-flex-item-align: 
+            
         }
     
     </style>
@@ -27,17 +51,45 @@
     <!-- 
         Atividade 1: Implemente o layout da aula anterior utilizando Grid layout 
     -->
-    <div class="l-sessao l-atividade1">
-
+    <div class="l-sessao l-sessao l-atividade1">
+        <article class="lista_user">
+            <div class="lista_user__item">
+                <img class="lista_user__item-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/93.jpg" alt="">
+                <div>
+                    <p>Linda Hart</p>
+                    <p>6765 Shady Ln Dr</p>
+                </div>
+            </div>
+            <div class="lista_user__item">
+                <img class="lista_user__item-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/46.jpg" alt="">
+                <div>
+                    <p>Roger Medina</p>
+                    <p>2420 Paddock Way</p>
+                </div>
+            </div>
+            <div class="lista_user__item">
+                <img class="lista_user__item-img" src=https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/59.jpg alt="">"
+                <div>
+                    <p>Dean Sullivan</p>
+                    <p>6727 Airplane Ave</p>
+                </div>   
+            </div>
+            <div class="lista_user__item">
+                <img class="lista_user__item-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/78.jpg" alt="">
+                <div>
+                    <p>Elizabeth Austin</p>
+                    <p>6685 Blossom Hill Rd</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- 
         Atividade 2: Implemente o layout da aula anterior utilizando Grid layout 
     -->
-    <div class="l-sessao l-atividade1">
+    <div class="l-sessao l-atividade2">
 
     </div>
-    
 
 </body>
 </html>
