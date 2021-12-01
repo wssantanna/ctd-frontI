@@ -1,5 +1,9 @@
+<!-- Lucas Adrian, Felipe Lopes, Victoria Dias, Bruno Lima, Allan miranda -->
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +11,23 @@
     <title>Mesa de trabalho</title>
 </head>
 <style type="text/css">
-
     /*
         1. Liste todos os itens verticalmente.
     */
+    .geral{
+        display: flex;
+        justify-content: center;
+    }
+
+
     .lista {
         display: flex;
+        list-style-type: none;
+        background-color: white;
+        font-weight: bold;
+        flex-direction: column;
+        width: 400px;
+       
     }
 
     /*
@@ -20,61 +35,104 @@
     */
     .cartao {
         display: flex;
+        gap: 15px;
+        
+       
     }
 
+    body {
+        background-color: rgb(82, 177, 255);
+    }
+
+    .list-item {
+        background-color: white;
+        display:flex;
+        color: rgb(37, 37, 37);
+        
+               
+    }
+
+    .cartao__endereco {
+        color: rgb(154, 156, 156);
+    }
+
+    .cartao__imagem {
+        border-radius: 50%;
+       
+    }
+
+    .cartao__corpo {
+        
+    }
+
+    hr {
+        margin: 1px;
+        
+    }   
+
 </style>
+
 <body>
 
     <!-- 
         Você deverá manipular a classe 'lista' para controlar o posicionamento dos itens. 
         Busque aproximar-se ao máximo da imagem do resultado sedida pelo professor.
     -->
+    <div class="geral">
     <ul class="lista">
+        
         <li class="list-item">
             <!-- 
                 Dica: Você deverá montar o design do cartão utilizando Flexbox também,
                 ou seja, você irá transformar o item em um conteúdo flexível com a propriedade display:flex.
             -->
+            
             <figure class="cartao">
-                <img class="cartao__imagem" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/93.jpg" alt="Foto do usuário">
+                <img class="cartao__imagem" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/93.jpg"
+                    alt="Foto do usuário">
                 <figcaption class="cartao__corpo">
                     <h4 class="cartao__titulo">Linda Hart</h4>
                     <p class="cartao__endereco">6765 Shady Ln Dr</p>
                 </figcaption>
             </figure>
         </li>
-
+        <hr class="hr1">
         <li class="list-item">
             <figure class="cartao">
-                <img class="cartao__imagem" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/46.jpg" alt="Foto do usuário">
+                <img class="cartao__imagem" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/46.jpg"
+                    alt="Foto do usuário">
                 <figcaption class="cartao__corpo">
                     <h4 class="cartao__titulo">Roger Medina</h4>
                     <p class="cartao__endereco">2420 Paddock Way</p>
                 </figcaption>
             </figure>
         </li>
-
+        <hr class="hr1">
         <li class="list-item">
             <figure class="cartao">
-                <img class="cartao__imagem" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/59.jpg" alt="Foto do usuário">
+                <img class="cartao__imagem" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/59.jpg"
+                    alt="Foto do usuário">
                 <figcaption class="cartao__corpo">
                     <h4 class="cartao__titulo">Dean Sullivan</h4>
                     <p class="cartao__endereco">6727 Airplane Ave</p>
                 </figcaption>
             </figure>
         </li>
-
+        <hr class="hr1">
         <li class="list-item">
             <figure class="cartao">
-                <img class="cartao__imagem" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/78.jpg" alt="Foto do usuário">
+                <img class="cartao__imagem" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/78.jpg"
+                    alt="Foto do usuário">
                 <figcaption class="cartao__corpo">
                     <h4 class="cartao__titulo">Elizabeth Austin</h4>
                     <p class="cartao__endereco">6685 Blossom Hill Rd</p>
                 </figcaption>
             </figure>
         </li>
-        
-      </ul>
+
+    </ul>
+    </div>
 
 </body>
+
 </html>
