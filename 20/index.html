@@ -5,24 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula 20 - Grid layout</title>
+    <link rel="stylesheet" href="style.css">
     <style type="text/css">
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        .conteudo {
-            border: 5px solid gray;
-            padding: 25px;
-            margin: 0 auto;
-            max-width: 1200px;
-        }
-
-        .sessao__titulo {
-            text-align: center;
-        }
-
-
 
         .grade {
             border: 5px solid orange;
@@ -108,7 +92,7 @@
     
     <article class="conteudo">
 
-        <h1>Grid layout</h1>
+        <h1 class="conteudo__titulo">Grid layout</h1>
 
         <section class="sessao">
             <h2 class="sessao__titulo">Definindo o número de colunas<br>grid-template-columns</h2>
@@ -152,7 +136,7 @@
         <section class="sessao">
             <h2 class="sessao__titulo">Definindo um modelo de grade<br>grid-template-areas</h2>
             <div 
-                class="aplicativo"
+                class="grade aplicativo"
                 style="height: 500px;"
             >
                 <div class="grade__item logo">Logo</div>
