@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <title>Mesa de trabalho</title>
 </head>
 <style type="text/css">
@@ -11,8 +14,35 @@
     /*
         1. Liste todos os itens verticalmente.
     */
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        border: none;
+        list-style: none;
+        text-decoration: none;
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+    }
+
+    html {
+        font-size: 62.5%;
+    }
+
+    body {
+        background-color: rgb(91, 159, 237);
+    }
+
     .lista {
         display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        border-radius: 0.2rem;
+        width: 100%;
+        max-width: 50rem;
+        margin: 15rem auto;
+        padding: 0 25px;
     }
 
     /*
@@ -20,6 +50,36 @@
     */
     .cartao {
         display: flex;
+        padding: 1.5rem 1.5rem;
+        align-items: center;
+        border-top: 1px solid #c4c4c4;
+    }
+
+    .cartao.one {
+        border: 0;
+    }
+
+    .cartao__imagem {
+        border-radius: 50%;
+        width: 100%;
+        max-width: 8.5rem;
+        
+    }
+
+    .cartao__corpo {
+        padding-left: 2rem;
+    }
+
+    .cartao__corpo h4 {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 2.8rem;
+    }
+
+    .cartao__corpo p {
+        font-size: 1.7rem;
+        color: #aaaaaa;
+        font-weight: 300;
     }
 
 </style>
@@ -35,7 +95,7 @@
                 Dica: Você deverá montar o design do cartão utilizando Flexbox também,
                 ou seja, você irá transformar o item em um conteúdo flexível com a propriedade display:flex.
             -->
-            <figure class="cartao">
+            <figure class="cartao one">
                 <img class="cartao__imagem" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/93.jpg" alt="Foto do usuário">
                 <figcaption class="cartao__corpo">
                     <h4 class="cartao__titulo">Linda Hart</h4>
