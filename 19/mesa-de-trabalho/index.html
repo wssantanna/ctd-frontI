@@ -7,20 +7,79 @@
     <title>Mesa de trabalho</title>
 </head>
 <style type="text/css">
+    
+    *{
+
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+    }
+
+    body {
+        background-color: #5b9eed;
+    }
 
     /*
         1. Liste todos os itens verticalmente.
     */
     .lista {
         display: flex;
+        flex-direction: column;
+        list-style: none;
+        background-color: #fff;
+        text-align: center;
+        align-self: center;
+        width: 500px;
+        margin: 0 auto;
+        margin-top: 10px;
+        padding: 20px 0px;
     }
+
+    .list-item {
+        border-bottom: solid 1px #cccccc47;
+        margin: 0 20px;
+    }
+
+    .list-item:nth-child(4) {
+        border: none;
+    }  
 
     /*
         2. Implemente o cartão de cada item conforme a imagem referência.
     */
     .cartao {
         display: flex;
+        background-color: white;
+        padding: 10px;
+        margin: 10px;
+        margin-top: 10px;
     }
+
+    figcaption.cartao__corpo {
+        text-align: left;
+        margin-left: 25px;
+    }
+
+    .cartao__imagem{
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+    }
+
+    .cartao__titulo {
+        padding-top: 20px;
+        font-weight: 800px;
+        font-family: sans-serif;
+        
+    }
+
+    .cartao__endereco {
+        font-family: sans-serif;
+        color: silver;
+        padding-top: 15px;
+    }
+    
 
 </style>
 <body>
