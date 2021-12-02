@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 20 - Grid layout</title>
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css">
+
+        .grade {
+            /* Define que este elemento é uma grade */
+            display: grid;
+        }
+
+        .espacamento {
+            gap: 5px;
+        }
+
+        /*
+            Definindo um modelo de colunas
+        */
+
+        .definir-colunas {
+            grid-template-columns: 1fr 2fr 3fr 4fr;
+        }
+
+        .definindo-colunas-automaticamente {
+            grid-template-columns: repeat(3, 1fr); /* 1fr 1fr 1fr */
+        }
+
+        .dimensao-minima-maxima {
+            grid-template-columns: minmax(300px, 1fr) repeat(2, minmax(50px, 1fr));
+        }
+
+        /*
+            Definindo um modelo de linhas
+        */
+
+        .definir-linhas {
+            grid-template-rows: 100px 1fr 50px;
+        }
+
+        /*
+            Definindo um modelo de grade.
+        */
+
+        .logo {
+            grid-area: logo;
+        }
+
+        .navegacao {
+            grid-area: nav;
+        }
+
+        .conteudo-lateral {
+            grid-area: lateral;
+        }
+
+        .conteudo-principal {
+            grid-area: conteudo;
+        }
+
+        .rodape {
+            grid-area: rodape;
+        }
+
+        .aplicativo {
+            display: grid;
+            gap: 5px;
+            grid-template-rows: 100px 1fr 25px;
+            grid-template-columns: 100px 1fr 1fr;
+            grid-template-areas: 
+                "logo       nav         nav" 
+                "lateral    conteudo    conteudo"
+                "rodape     rodape      rodape";
+        }
+
+    </style>
+</head>
+<body>
+    
+    <article class="conteudo">
+
+        <h1 class="conteudo__titulo">Grid layout</h1>
+
+        <section class="sessao">
+            <h2 class="sessao__titulo">Definindo o número de colunas<br>grid-template-columns</h2>
+            <div class="grade definir-colunas espacamento">
+                <div class="grade__item">1</div>
+                <div class="grade__item">2</div>
+                <div class="grade__item">3</div>
+                <div class="grade__item">4</div>
+            </div>
+        </section>
+
+        <section class="sessao">
+            <h2 class="sessao__titulo">Definindo o número de repetições e dimensão<br>repeat()</h2>
+            <div class="grade definindo-colunas-automaticamente espacamento">
+                <div class="grade__item">1</div>
+                <div class="grade__item">2</div>
+                <div class="grade__item">3</div>
+            </div>
+        </section>
+
+        <section class="sessao">
+            <h2 class="sessao__titulo">Definindo o valor dimensão mínima e máxima<br>minmax()</h2>
+            <div class="grade dimensao-minima-maxima espacamento">
+                <div class="grade__item">1</div>
+                <div class="grade__item">2</div>
+                <div class="grade__item">3</div>
+            </div>
+        </section>
+
+        <section class="sessao">
+            <h2 class="sessao__titulo">Definindo o número de linhas<br>grid-template-rows</h2>
+            <div 
+                class="grade definir-linhas espacamento"
+                style="height: 500px;"
+            >
+                <div class="grade__item">1</div>
+                <div class="grade__item">2</div>
+                <div class="grade__item">3</div>
+            </div>
+        </section>
+
+        <section class="sessao">
+            <h2 class="sessao__titulo">Definindo um modelo de grade<br>grid-template-areas & grid-area</h2>
+            <div 
+                class="grade aplicativo"
+                style="height: 500px;"
+            >
+                <div class="grade__item logo">Logo</div>
+                <div class="grade__item navegacao">navegacao</div>
+                <div class="grade__item conteudo-lateral">conteudo-lateral</div>
+                <div class="grade__item conteudo-principal">conteudo</div>
+                <div class="grade__item rodape">rodape</div>
+            </div>
+        </section>
+    
+    </article>
+    
+
+</body>
+</html>
