@@ -9,48 +9,41 @@
     <style type="text/css">
 
         .grade {
-            border: 5px solid orange;
+            /* Define que este elemento é uma grade */
             display: grid;
-            padding: 20px;
-        }
-
-        .grade__item {
-            background-color: greenyellow;
-            border-radius: 5px;
-            font-weight: 900;
-            padding: 5px;
-            text-align: center;
         }
 
         .espacamento {
             gap: 5px;
         }
 
+        /*
+            Definindo um modelo de colunas
+        */
+
         .definir-colunas {
-            grid-template-columns: 50px 1fr 1fr;
+            grid-template-columns: 1fr 2fr 3fr 4fr;
         }
 
         .definindo-colunas-automaticamente {
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(3, 1fr); /* 1fr 1fr 1fr */
         }
 
         .dimensao-minima-maxima {
-            grid-template-columns: minmax(300px, 1fr) repeat(2, 1fr);
+            grid-template-columns: minmax(300px, 1fr) repeat(2, minmax(50px, 1fr));
         }
+
+        /*
+            Definindo um modelo de linhas
+        */
 
         .definir-linhas {
             grid-template-rows: 100px 1fr 50px;
         }
 
-        .logo, 
-        .navegacao,
-        .conteudo-lateral,
-        .conteudo-principal,
-        .rodape {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+        /*
+            Definindo um modelo de grade.
+        */
 
         .logo {
             grid-area: logo;
@@ -75,16 +68,13 @@
         .aplicativo {
             display: grid;
             gap: 5px;
-
-            grid-template-columns: 180px 1fr 1fr ;
-            grid-template-rows: 100px 1fr 50px;
-            
+            grid-template-rows: 100px 1fr 25px;
+            grid-template-columns: 100px 1fr 1fr;
             grid-template-areas: 
-                "logo nav nav"
-                "lateral conteudo conteudo"
-                "lateral rodape rodape";
+                "logo       nav         nav" 
+                "lateral    conteudo    conteudo"
+                "rodape     rodape      rodape";
         }
-
 
     </style>
 </head>
@@ -100,6 +90,7 @@
                 <div class="grade__item">1</div>
                 <div class="grade__item">2</div>
                 <div class="grade__item">3</div>
+                <div class="grade__item">4</div>
             </div>
         </section>
 
@@ -134,7 +125,7 @@
         </section>
 
         <section class="sessao">
-            <h2 class="sessao__titulo">Definindo um modelo de grade<br>grid-template-areas</h2>
+            <h2 class="sessao__titulo">Definindo um modelo de grade<br>grid-template-areas & grid-area</h2>
             <div 
                 class="grade aplicativo"
                 style="height: 500px;"

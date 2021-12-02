@@ -12,3 +12,19 @@ body {
 .sessao__titulo {
     text-align: center;
 }
+
+.grade {
+    border: 5px solid orange;
+    padding: 20px;
+}
+
+.grade__item {
+    align-items: center;
+    background-color: greenyellow;
+    border-radius: 5px;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    text-align: center;
+}
