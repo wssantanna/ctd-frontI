@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front I - Revisão 2/2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <article class="conteudo">
+
+        <h1 class="conteudo__titulo">Front I - Revisão 2/2</h1>
+
+        <!-- 
+            Seletores 2/2
+            - Pseudo-elemento: Estado
+            - Pseudo-classe: Conteúdo
+        -->
+        <style type="text/css">
+            .lista {
+                padding: 0;
+                margin: 0;
+                width: 100%;
+            }
+            .lista__item {
+                list-style: none;
+                background-color: aqua;
+                border-radius: 5px;
+                margin: 5px 0;
+                padding: 5px 10px;
+            }
+            .lista__link {
+                color: black;
+                font-size: 18px;
+                font-weight: 900;
+                text-decoration: none;
+            }
+
+            /* Pseudo-classes: Estado */ 
+
+            .lista__item:hover {
+                background-color: blueviolet;
+            }
+
+            .lista__item:active {
+                background-color: orange;
+            }
+
+            /* Pseudo-elementos: Conteudo */ 
+            
+            .lista__item:first-child {
+                background-color: greenyellow;
+            }
+
+            .lista__item:last-child {
+                background-color: pink;
+            }
+
+            .lista__item:nth-child(3) {
+                background-color: deeppink;
+            }
+
+            .sessao__titulo::first-letter {
+                color: red;
+            }
+
+            .lista::before, 
+            .lista::after {
+                background-color: black;
+                border-radius: 10px;
+                color: white;
+                display: block;
+                font-weight: 900;
+                padding: 25px 0;
+                text-align: center;
+            }
+
+            .lista::before {
+                content: 'Início da lista';
+            }
+
+            .lista::after {
+                content: 'Fim da lista';
+            }
+
+        </style>
+        <section class="sessao">
+            <h2 class="sessao__titulo">Pseudo-classe, pseudo-elemento</h2>
+            <div class="sessao__conteudo">
+                <ul class="lista">
+                    <li class="lista__item">
+                        <a href="" class="lista__link">Bike</a>
+                    </li>
+                    <li class="lista__item">
+                        <a href="" class="lista__link">Bola</a>
+                    </li>
+                    <li class="lista__item">
+                        <a href="" class="lista__link">Boneca</a>
+                    </li>
+                    <li class="lista__item">
+                        <a href="" class="lista__link">Carrinho de controle remoto</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 
+            Animações 
+            - Transição
+            - Transformação
+            - Keyframes
+        -->
+        <style type="text/css">
+            .bola {
+                background-color: red;
+                border-radius: 50%;
+                height: 150px;
+                width: 150px;
+                /* Transição */
+                transition-property: background-color transform;
+                transition-duration: 1s;
+            }
+
+            .bola:hover {
+                background-color: greenyellow;
+                /* Transformação */
+                transform: scale(1.2);
+            }
+
+            /* Keyframe - Quadro a quadro */
+
+            @keyframes ocultar {
+                0% {
+                    opacity: 1;
+                }
+                50% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+
+            .ocultar {
+                /* Associação da linha do tempo com o objeto */
+                animation-name: ocultar;
+                /* Duração da animação */
+                animation-duration: 2s;
+                /* Quantidade de vezes que a animção acontecerá */
+                animation-iteration-count: 1;
+            }
+
+            .ocultar2 {
+                /* Você pode reutilizar a linha do tempo quantas vezes necessitar */
+                animation-name: ocultar; 
+                /* Também alterar a duração e a quantidade de vezes que a animação acontecerá */
+                animation-duration: 1s;
+                animation-iteration-count: 1;
+            }
+
+        </style>
+        <section class="sessao">
+            <h2 class="sessao__titulo">Animação</h2>
+            <div class="sessao__conteudo">
+                <div class="bola ocultar"></div>
+                <div class="bola ocultar2"></div>
+            </div>
+        </section>
+
+        <!-- 
+            Flexbox
+            - (Pai) 
+                - display: grid
+                - flex-direction
+                - flex-wrap
+                - justify-content
+                - align-itens
+                - align-content
+            - (Filho)
+                - flex-grow
+                - flex-basis
+                - flex-shrink
+                - order
+                - align-self
+        -->
+        <style type="text/css">
+            /* Conteúdo (Pai) */
+            .conteudo-flexivel {
+                width: 100%;
+                /* Conteúdo flexível */
+                display: flex;
+                /* Direção da distribuição de itens */
+                flex-direction: row;
+                /* Controle da quebra de linhas */
+                flex-wrap: wrap;
+                /* Espaçamento entre os itens */
+                gap: 10px;
+                /* Alinhamento/Distribuição na horizontal */
+                justify-content: center;
+                /* Alinhamento/Distribuição na vertical */
+                align-content: center;
+            }
+
+            /* Conteúdo (Filho) */
+            .conteudo-flexivel__item {
+                background-color: coral;
+                border-radius: 5px;
+                font-weight: 900;
+                font-size: 18px;
+                padding: 10px 25px;
+                text-align: center;
+
+                flex-grow: 1;
+            }
+
+            /* Define a proporção do item */
+            .conteudo-flexivel__item--triplo {
+                flex-grow: 3;
+            }
+
+            /* Define um tamanho mínimo inicial para o item */
+            .conteudo-flexivel__item--tamanho-minimo {
+                flex-basis: 250px
+            }
+
+            /* Controla a proporção de encolhimento / Limita o encolhimento máximo */
+            .conteudo-flexivel__item--encolhinento-maximo {
+                flex-shrink: 2
+            }
+
+            /* Define a ordem do item */
+            .conteudo-flexivel__item--primeiro {
+                order: 1;
+            }
+
+            .conteudo-flexivel__item--segundo {
+                order: 2;
+            }
+
+            .conteudo-flexivel__item--terceiro {
+                order: 3;
+            }
+
+            .conteudo-flexivel__item--quarto {
+                order: 4;
+            }
+
+        </style>
+        <section class="sessao">
+            <h2 class="sessao__titulo">Flexbox</h2>
+            <div class="sessao__conteudo">
+                <div class="conteudo-flexivel" style="height: 400px;">
+                    <div class="conteudo-flexivel__item conteudo-flexivel__item--terceiro">1</div>
+                    <div class="conteudo-flexivel__item conteudo-flexivel__item--tamanho-minimo conteudo-flexivel__item--encolhinento-maximo conteudo-flexivel__item--segundo">2</div>
+                    <div class="conteudo-flexivel__item conteudo-flexivel__item--triplo conteudo-flexivel__item--quarto">3</div>
+                    <div class="conteudo-flexivel__item conteudo-flexivel__item--primeiro">4</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+            Grid layout
+            - (Pai) 
+                - display
+                - grid-template-columns
+                - grid-template-rows
+                - repeat()
+                - minmax()
+                - grid-template-areas
+            - (Filho)
+                - grid-area
+        -->
+        <style type="text/css">
+            
+            /* Conteúdo (Pai) */
+            .grade {
+                width: 100%;
+                
+                display: grid;
+                gap: 5px;
+                /*grid-template-columns: repeat(3, 1fr) minmax(250px, 2fr);*/
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr;
+            }
+
+            /* Conteúdo (Filho) */
+            .grade__item {
+                background-color: coral;
+                border-radius: 5px;
+                font-size: 18px;
+                font-weight: 900;
+                padding: 5px 10px;
+                text-align: center;
+                /* Flexbox */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .navegacao {
+                /* Cria um nome para a área da grade */
+                grid-area: nav;
+            }
+
+            .lateral {
+                grid-area: lateral;
+            }
+            
+            .conteudo-principal {
+                grid-area: conteudo;
+            }
+
+            .rodape {
+                grid-area: rodape;
+            }
+
+            .aplicativo {
+                grid-template-areas: 
+                    "nav nav"
+                    "lateral conteudo"
+                    "lateral rodape";
+
+                grid-template-rows: 50px 1fr 35px;
+                grid-template-columns: 100px 1fr;
+            }
+
+        </style>
+        <section class="sessao">
+            <h2 class="sessao__titulo">Grid layout</h2>
+            <div class="sessao__conteudo">
+                <div class="grade aplicativo" style="height: 400px;">
+                    <div class="grade__item navegacao">navegação</div>
+                    <div class="grade__item lateral">lateral</div>
+                    <div class="grade__item conteudo-principal">conteudo</div>
+                    <div class="grade__item rodape">rodape</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+            Design adaptativo
+            - 
+        -->
+        <style type="text/css">
+
+        </style>
+        <section class="sessao">
+            <h2 class="sessao__titulo">Design adaptativo (Ainda não foi ministrado)</h2>
+            <div class="sessao__conteudo">
+                
+            </div>
+        </section>
+
+    </article>
+    
+</body>
+</html>
