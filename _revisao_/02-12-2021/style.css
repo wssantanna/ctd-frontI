@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0 25px;
+}
+.conteudo {
+    margin: 100px auto;
+    max-width: 1280px;
+}
+
+.conteudo__titulo {
+    font-size: 32px;
+}
+
+.sessao {
+    margin: 25px 0;
+}
+
+.sessao__titulo {
+    font-size: 24px;
+}
+
+.sessao__conteudo {
+    align-items: center;
+    border: 5px solid gray;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    padding: 25px;
+}
+
+.botao {
+    background-color: gray;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+}
+
+.botao__vermelho {
+    background-color: red;
+    color: white;
+}
+
+.botao__azul {
+    background-color: blue;
+}
