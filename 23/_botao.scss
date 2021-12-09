@@ -1,0 +1,15 @@
+.botao {
+    background-color: $cor;
+    color: black;
+    font-family: tipografia.$fonte;
+    // Mixin(s)
+    @include centralizar;
+    @include espacamentoInterno(25px);
+    // Herança (placeholder)
+    @extend %bordaArredondada;
+}
+
+.cartao {
+    @include espacamentoInterno(10px);
+    @extend %bordaArredondada;
+}
