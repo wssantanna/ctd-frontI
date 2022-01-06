@@ -1,0 +1,14 @@
+
+$theme-colors: (
+    "primary": #0074d9,
+    "secondary": #0f0f0f,
+    "dark": #000,
+);
+
+$font-family-sans-serif: 'Inter', sans-serif;
+
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+.l-banner {
+    height: 768px;
+}

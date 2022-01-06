@@ -1,0 +1,16 @@
+{
+  "name": "digital-house",
+  "version": "1.0.0",
+  "description": "Clone da página da Digital House",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compilar": "sass --style=compressed src:public",
+    "dev": "sass --watch src:public"
+  },
+  "author": "Willian Sant Anna",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.1.3"
+  }
+}
